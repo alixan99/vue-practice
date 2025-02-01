@@ -1,18 +1,26 @@
 <template>
-  <HomeView/>
+  <div class="app-container" id="app">
+    <TodoList />
+  </div>
 </template>
 
 <script>
-import HomeView from './views/HomeView.vue'
+import TodoList from '@/components/blocks/TodoList.vue'
 
 export default {
   name: 'App',
   components: {
-    HomeView
+    TodoList
   }
 }
 </script>
 
 <style lang="scss">
-
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 100vh; /* Занять всю высоту экрана */
+  background-color: #f4f4f9; /* Светлый фон */
+}
 </style>
